@@ -1,12 +1,16 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
-import ImageOpener from "./image/page";
 
-const FilterArchive = (params) => {
-  console.log(params, "<<==params");
+
+const FilterArchive = () => {
+    const imageName = "beaver.jpg";
   return (
     <div>
       <div>FilterArchive</div>
-      <ImageOpener />
+      <Link href={`news/${imageName}`}>
+        <Image src={`/images/news/${imageName}`} height={100} width={100} />
+      </Link>
     </div>
   );
 };
